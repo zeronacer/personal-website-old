@@ -1,6 +1,15 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://grabau.dev`,
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'projects',
+        path: `${__dirname}/src/project-pages`,
+      }
+    },
+    'gatsby-transformer-remark'
+  ],
 }
