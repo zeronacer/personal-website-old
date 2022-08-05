@@ -1,5 +1,15 @@
+// Utilities
+@import "utilities/css-reset";
+
+// Variables
 @import "variables/fonts";
+@import "variables/colors";
+
+// Components
+
 
 body {
     @include font-inter(regular);
+    background-color: $primary;
+    color: $secondary;
 }
