@@ -10,6 +10,7 @@ module.exports = {
         path: `${__dirname}/src/project-pages`,
       }
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    'gatsby-plugin-sass'
   ],
 }
