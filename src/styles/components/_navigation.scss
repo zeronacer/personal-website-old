@@ -22,11 +22,11 @@ header {
 
 				a.navLink {
 					color: $secondary;
-                    transition: color 300ms;
+                    transition: all 300ms;
 
                     svg {
-                        width: 2rem;
-                        height: 2rem;
+                        width: 2.5rem;
+                        height: 2.5rem;
                     }
 
                     &:hover, &:focus {

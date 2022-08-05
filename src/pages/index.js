@@ -20,7 +20,7 @@ const IndexPage = ({
 			let home_scene = new ScrollMagic.Scene({
 				triggerElement: '#home',
         duration: '100%'
-			}).setClassToggle('#home-link', 'active')
+			}).setClassToggle('#home-link', 'text-primary')
 
       let about_scene = new ScrollMagic.Scene({
 				triggerElement: '#about',
@@ -44,19 +44,33 @@ const IndexPage = ({
     
   return (
 		<Layout>
-			<section id="home">
+			<section id="home" className="bg-pattern text-primary">
 				<div className="content">
-          <h1 id="heading" className="">Maximilian Grabau</h1>
+          <span id="name-subheading">Hi, ich bin</span>
+          <h1 id="name-heading">Maximilian</h1>
+          <ul className="pills">
+            <li>Symfony</li>
+            <li>WordPress</li>
+            <li>React</li>
+            <li>UI/UX</li>
+          </ul>
         </div>
 			</section>
-			<section id="about">
-				<div class="content">About</div>
+			<section id="about" className="bg-primary">
+				<div className="content">
+          <h2>Über mich</h2>
+        </div>
 			</section>
-			<section id="projects">
-				<div class="content">Projects{Projects}</div>
+			<section id="projects" className="bg-secondary-light text-primary">
+				<div className="content">
+          <h2>Projekte</h2>
+          {Projects}
+        </div>
 			</section>
-			<section id="contact">
-				<div class="content">Contact</div>
+			<section id="contact" className="bg-primary">
+				<div className="content">
+          <h2>Kontakt</h2>
+        </div>
 			</section>
 		</Layout>
 	);

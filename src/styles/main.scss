@@ -5,8 +5,12 @@
 @import "variables/fonts";
 @import "variables/colors";
 
+// Pages
+@import "pages/index";
+
 // Components
 @import "components/navigation";
+@import "components/pills";
 
 html {
     scroll-behavior: smooth;
@@ -19,6 +23,7 @@ body {
     color: $secondary;
     width: 100vw;
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 main {
@@ -27,8 +32,12 @@ main {
         scroll-snap-align: center;
     
         .content {
-            max-width: 70vw;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-width: 75vw;
             margin: auto;
+            padding: 5rem 0;
         }
     }
 }

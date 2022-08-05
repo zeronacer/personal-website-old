@@ -1,0 +1,16 @@
+ul.pills {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+
+    li {
+        @include font-fira();
+        padding: 1rem 2rem;
+        background-color: fade-out($color: $secondary, $amount: 0.3);
+        color: $primary;
+        border-radius: 2rem;
+        font-size: 1.1rem;
+    }
+}
