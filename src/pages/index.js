@@ -48,7 +48,7 @@ const IndexPage = ({
 				<div className="content">
           <span id="name-subheading">Hi, ich bin</span>
           <h1 id="name-heading">Maximilian</h1>
-          <ul className="pills">
+          <ul className="pills pills-large">
             <li>Symfony</li>
             <li>WordPress</li>
             <li>React</li>
@@ -64,7 +64,9 @@ const IndexPage = ({
 			<section id="projects" className="bg-secondary-light text-primary">
 				<div className="content">
           <h2>Projekte</h2>
-          {Projects}
+          <div className="grid">
+            {Projects}
+          </div>
         </div>
 			</section>
 			<section id="contact" className="bg-primary">

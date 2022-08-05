@@ -1,0 +1,19 @@
+.project-link-wrapper {
+    padding: 1rem 2rem;
+    background-color: $secondary;
+    color: $primary;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+
+    .project-link {
+        color: $primary;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .project-date {
+            opacity: 0.8;
+        }
+    }
+}
