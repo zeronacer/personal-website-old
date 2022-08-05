@@ -6,7 +6,7 @@ export default function Navigation() {
 			<nav>
 				<ul className="navigation">
 					<li className="navItem">
-						<a href="#home" className="navLink">
+						<a href="#home" className="navLink" id='home-link'>
 							<svg
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -21,7 +21,7 @@ export default function Navigation() {
 						</a>
 					</li>
 					<li className="navItem">
-						<a href="#about" className="navLink">
+						<a href="#about" className="navLink" id='about-link'>
 							<svg
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -36,7 +36,7 @@ export default function Navigation() {
 						</a>
 					</li>
 					<li className="navItem">
-						<a href="#projects" className="navLink">
+						<a href="#projects" className="navLink" id='projects-link'>
 							<svg
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -51,7 +51,7 @@ export default function Navigation() {
 						</a>
 					</li>
 					<li className="navItem">
-						<a href="#contact" className="navLink">
+						<a href="#contact" className="navLink" id='contact-link'>
 							<svg
 								viewBox="0 0 24 24"
 								stroke="currentColor"

@@ -8,6 +8,11 @@
 // Components
 @import "components/navigation";
 
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
 body {
     @include font-inter();
     background-color: $primary;
@@ -16,11 +21,14 @@ body {
     overflow-x: hidden;
 }
 
-section {
-    min-height: 100vh;
-
-    .content {
-        max-width: 70vw;
-        margin: auto;
+main {
+    section {
+        min-height: 100vh;
+        scroll-snap-align: center;
+    
+        .content {
+            max-width: 70vw;
+            margin: auto;
+        }
     }
 }
