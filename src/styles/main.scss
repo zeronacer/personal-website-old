@@ -1,0 +1,48 @@
+// Utilities
+@import "utilities/css-reset";
+@import "utilities/typography";
+
+// Variables
+@import "variables/fonts";
+@import "variables/colors";
+
+// Pages
+@import "pages/index";
+@import "pages/project";
+
+// Components
+@import "components/navigation";
+@import "components/pills";
+@import "components/project-link";
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    @include font-inter();
+    background-color: $primary;
+    color: $secondary;
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+main {
+    section {
+        min-height: 100vh;
+        scroll-snap-align: center;
+    
+        
+    }
+
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 75vw;
+        margin: auto;
+        padding: 5rem 0;
+    }
+}

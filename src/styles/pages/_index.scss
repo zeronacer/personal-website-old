@@ -1,0 +1,15 @@
+#name-heading {
+    font-size: 10rem;
+    font-weight: 600;
+    margin-top: -3rem;
+}
+
+#name-subheading {
+    font-size: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}

@@ -1,0 +1,19 @@
+.project-container {
+    .project-title {
+        margin-bottom: 0;
+    }
+    
+    span.project-date {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+    
+    .project-details {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        margin: 0.5rem 0 2rem 0
+    }
+}
+
