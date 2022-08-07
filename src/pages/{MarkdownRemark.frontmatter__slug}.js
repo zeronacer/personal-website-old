@@ -7,16 +7,25 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <div className="project-container">
-      <div className="project">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+    <main className="project-container">
+      <article className="content">
+        <a href="/">Zurück</a>
+        <h1 className="project-title">{frontmatter.title}</h1>
+        <div className="project-details">
+        <span className="project-date">{frontmatter.date}</span>
+        <ul className="pills">
+        {frontmatter.tags.map(tag => {
+          return <li>{tag}</li>
+        })}
+        </ul>
+        </div>
+
         <div
           className="project-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
-    </div>
+      </article>
+    </main>
   )
 }
 
@@ -28,6 +37,7 @@ export const pageQuery = graphql`
         date(formatString: "DD.MM.YYYY")
         slug
         title
+        tags
       }
     }
   }

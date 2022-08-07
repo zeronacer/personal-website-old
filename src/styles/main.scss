@@ -8,6 +8,7 @@
 
 // Pages
 @import "pages/index";
+@import "pages/project";
 
 // Components
 @import "components/navigation";
@@ -33,13 +34,15 @@ main {
         min-height: 100vh;
         scroll-snap-align: center;
     
-        .content {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            max-width: 75vw;
-            margin: auto;
-            padding: 5rem 0;
-        }
+        
+    }
+
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 75vw;
+        margin: auto;
+        padding: 5rem 0;
     }
 }
