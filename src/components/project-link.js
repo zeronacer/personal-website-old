@@ -10,8 +10,9 @@ const ProjectLink = ({ project }) => (
         <span className="project-date">{project.frontmatter.date}</span>
       </div>
       <ul className="pills">
-        <li>Test</li>
-        <li>Test 2</li>
+        {project.frontmatter.tags.map(tag => {
+          return <li>{tag}</li>
+        })}
       </ul>
     </Link>
   </div>

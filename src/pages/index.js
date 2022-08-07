@@ -91,6 +91,7 @@ export const pageQuery = graphql`
             date(formatString: "D. MMMM YYYY")
             slug
             title
+            tags
           }
         }
       }
