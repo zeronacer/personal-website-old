@@ -5,46 +5,46 @@ $accent: #ef233c;
 $accent-dark: #d90429;
 
 .bg-primary {
-	background-color: $primary !important;
+  background-color: $primary !important;
 }
 
 .bg-secondary {
-	background-color: $secondary !important;
+  background-color: $secondary !important;
 }
 
 .bg-secondary-light {
-	background-color: $secondary-light !important;
+  background-color: $secondary-light !important;
 }
 
 .bg-accent {
-	background-color: $accent !important;
+  background-color: $accent !important;
 }
 
 .bg-accent-dark {
-	background-color: $accent-dark !important;
+  background-color: $accent-dark !important;
 }
 
 .bg-pattern {
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1025%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(239%2c 35%2c 60%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c521.5C99.873%2c507.077%2c192.987%2c483.283%2c286.961%2c446.52C403.411%2c400.964%2c547.903%2c386.369%2c615.056%2c280.887C682.942%2c174.253%2c663.008%2c31.282%2c628.779%2c-90.405C596.967%2c-203.499%2c520.819%2c-297.737%2c430.996%2c-373.46C350.168%2c-441.6%2c249.049%2c-473.588%2c146.04%2c-497.366C48.187%2c-519.954%2c-53.745%2c-539.245%2c-148.967%2c-507.335C-242.529%2c-475.981%2c-299.52%2c-389.019%2c-373.187%2c-323.368C-459.37%2c-246.564%2c-585.64%2c-199.596%2c-618.47%2c-88.923C-651.867%2c23.662%2c-589.483%2c140.128%2c-542.619%2c247.806C-495.016%2c357.183%2c-452.18%2c484.158%2c-345.674%2c537.879C-240.55%2c590.903%2c-116.53%2c538.328%2c0%2c521.5' fill='%23cc0f26'%3e%3c/path%3e%3cpath d='M1920 1808.3980000000001C2071.947 1803.528 2226.202 1834.144 2365.444 1773.125 2517.816 1706.353 2668.033 1604.462 2733.94 1451.714 2799.482 1299.814 2743.217 1128.667 2713.754 965.875 2685.324 808.79 2654.341 653.3140000000001 2565.442 520.721 2468.3469999999998 375.904 2357.949 199.81600000000003 2185.053 177.31399999999996 2010.523 154.59900000000005 1885.436 341.95399999999995 1723.6100000000001 411.15599999999995 1586.999 469.576 1416.839 448.16999999999996 1310.065 551.488 1200.519 657.488 1153.219 816.5740000000001 1147.2179999999998 968.891 1141.5259999999998 1113.363 1227.475 1237.749 1277.683 1373.336 1332.557 1521.522 1324.988 1713.659 1455.821 1802.2759999999998 1586.586 1890.847 1762.143 1813.4569999999999 1920 1808.3980000000001' fill='%23f35669'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1025'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
-	background-repeat: no-repeat;
-	background-size: cover;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1025%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(239%2c 35%2c 60%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c521.5C99.873%2c507.077%2c192.987%2c483.283%2c286.961%2c446.52C403.411%2c400.964%2c547.903%2c386.369%2c615.056%2c280.887C682.942%2c174.253%2c663.008%2c31.282%2c628.779%2c-90.405C596.967%2c-203.499%2c520.819%2c-297.737%2c430.996%2c-373.46C350.168%2c-441.6%2c249.049%2c-473.588%2c146.04%2c-497.366C48.187%2c-519.954%2c-53.745%2c-539.245%2c-148.967%2c-507.335C-242.529%2c-475.981%2c-299.52%2c-389.019%2c-373.187%2c-323.368C-459.37%2c-246.564%2c-585.64%2c-199.596%2c-618.47%2c-88.923C-651.867%2c23.662%2c-589.483%2c140.128%2c-542.619%2c247.806C-495.016%2c357.183%2c-452.18%2c484.158%2c-345.674%2c537.879C-240.55%2c590.903%2c-116.53%2c538.328%2c0%2c521.5' fill='%23cc0f26'%3e%3c/path%3e%3cpath d='M1920 1808.3980000000001C2071.947 1803.528 2226.202 1834.144 2365.444 1773.125 2517.816 1706.353 2668.033 1604.462 2733.94 1451.714 2799.482 1299.814 2743.217 1128.667 2713.754 965.875 2685.324 808.79 2654.341 653.3140000000001 2565.442 520.721 2468.3469999999998 375.904 2357.949 199.81600000000003 2185.053 177.31399999999996 2010.523 154.59900000000005 1885.436 341.95399999999995 1723.6100000000001 411.15599999999995 1586.999 469.576 1416.839 448.16999999999996 1310.065 551.488 1200.519 657.488 1153.219 816.5740000000001 1147.2179999999998 968.891 1141.5259999999998 1113.363 1227.475 1237.749 1277.683 1373.336 1332.557 1521.522 1324.988 1713.659 1455.821 1802.2759999999998 1586.586 1890.847 1762.143 1813.4569999999999 1920 1808.3980000000001' fill='%23f35669'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1025'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text-primary {
-	color: $primary !important;
+  color: $primary !important;
 }
 
 .text-secondary {
-	color: $secondary !important;
+  color: $secondary !important;
 }
 
 .hover-primary:hover {
-	color: $primary !important;
+  color: $primary !important;
 }
 
 .text-gradient-accent {
-    background: -webkit-linear-gradient($accent, $accent-dark);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient($accent, $accent-dark);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
