@@ -10,6 +10,10 @@ export function Head() {
   return (
     <SEO>
       <title>Maximilian Grabau</title>
+      <meta
+        name="description"
+        content="Hi, ich bin Maximilian Grabau. Als Full-Stack-Webentwickler aus Lübeck arbeite ich mithilfe von PHP, React und WordPress daran, das Netz zu einem besseren Ort zu machen."
+      />
     </SEO>
   );
 }
