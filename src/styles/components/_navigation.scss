@@ -1,43 +1,44 @@
 header {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 0 2rem;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
 
-	nav {
-		ul.navigation {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
+  nav {
+    ul.navigation {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
 
-			li.navItem {
-                &:not(:last-child) {
-                    margin-bottom: 0.5rem;
-                }
+      li.navItem {
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
 
-				a.navLink {
-					color: $secondary;
-                    transition: all 300ms;
+        a.navLink {
+          color: $secondary;
+          transition: all 300ms;
 
-                    svg {
-                        width: 2.5rem;
-                        height: 2.5rem;
-                    }
+          svg {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
 
-                    &:hover, &:focus {
-                        color: $accent-dark;
-                    }
+          &:hover,
+          &:focus {
+            color: $accent-dark;
+          }
 
-					&.active {
-						color: $accent;
-					}
-				}
-			}
-		}
-	}
+          &.active {
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
 }

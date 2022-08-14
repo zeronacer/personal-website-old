@@ -1,9 +1,9 @@
-import React from "react"
-import { useEffect } from "react"
-import { graphql } from "gatsby"
-import ScrollMagic from "scrollmagic"
-import Layout from "../components/layout"
-import ProjectLink from "../components/project-link"
+import React from "react";
+import { useEffect } from "react";
+import { graphql } from "gatsby";
+import ScrollMagic from "scrollmagic";
+import Layout from "../components/layout";
+import ProjectLink from "../components/project-link";
 
 export function Head() {
   return (
@@ -12,7 +12,7 @@ export function Head() {
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="icon" type="image/png" href="/favicon.png" />
     </>
-  )
+  );
 }
 
 const IndexPage = ({
@@ -21,37 +21,40 @@ const IndexPage = ({
   },
 }) => {
   const Projects = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <ProjectLink key={edge.node.id} project={edge.node} />)
+    .filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map((edge) => <ProjectLink key={edge.node.id} project={edge.node} />);
 
-    useEffect(() => {
-			let controller = new ScrollMagic.Controller();
+  useEffect(() => {
+    let controller = new ScrollMagic.Controller();
 
-			let home_scene = new ScrollMagic.Scene({
-				triggerElement: '#home',
-        duration: '100%'
-			}).setClassToggle('#home-link', 'text-primary')
+    let home_scene = new ScrollMagic.Scene({
+      triggerElement: "#home",
+      duration: "100%",
+    }).setClassToggle("#home-link", "text-primary");
 
-      let about_scene = new ScrollMagic.Scene({
-				triggerElement: '#about',
-        duration: '100%'
-			}).setClassToggle('#about-link', 'active')
+    let about_scene = new ScrollMagic.Scene({
+      triggerElement: "#about",
+      duration: "100%",
+    }).setClassToggle("#about-link", "active");
 
-      let projects_scene = new ScrollMagic.Scene({
-				triggerElement: '#projects',
-        duration: '100%'
-			}).setClassToggle('#projects-link', 'active')
+    let projects_scene = new ScrollMagic.Scene({
+      triggerElement: "#projects",
+      duration: "100%",
+    }).setClassToggle("#projects-link", "active");
 
-      let contact_scene = new ScrollMagic.Scene({
-				triggerElement: '#contact',
-        duration: '100%'
-			}).setClassToggle('#contact-link', 'active')
+    let contact_scene = new ScrollMagic.Scene({
+      triggerElement: "#contact",
+      duration: "100%",
+    }).setClassToggle("#contact-link", "active");
 
-      controller.addScene([
-        home_scene, about_scene, projects_scene, contact_scene
-      ])
-		}, []);
-    
+    controller.addScene([
+      home_scene,
+      about_scene,
+      projects_scene,
+      contact_scene,
+    ]);
+  }, []);
+
   return (
     <Layout>
       <section id="home" className="bg-pattern text-primary">
@@ -76,9 +79,9 @@ const IndexPage = ({
           </p>
           <p>
             Mein Ziel ist es seitdem, Menschen mit Software den Alltag zuhause
-            und im Büro leichter, produktiver und unbeschwerter zu machen.
-            Eine nutzerorientierte Digitalisierung von Prozessen sowie Freude
-            bei der Benutzung sind die Kriterien, die meiner Meinung nach
+            und im Büro leichter, produktiver und unbeschwerter zu machen. Eine
+            nutzerorientierte Digitalisierung von Prozessen sowie Freude bei der
+            Benutzung sind die Kriterien, die meiner Meinung nach
             ausschlaggebend für die Qualität von Software sind.
           </p>
           <p>
@@ -102,9 +105,9 @@ const IndexPage = ({
       </section>
     </Layout>
   );
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query {
@@ -123,4 +126,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
