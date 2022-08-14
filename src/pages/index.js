@@ -5,6 +5,16 @@ import ScrollMagic from "scrollmagic"
 import Layout from "../components/layout"
 import ProjectLink from "../components/project-link"
 
+export function Head() {
+  return (
+    <>
+      <title>Maximilian Grabau</title>
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
+    </>
+  )
+}
+
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
@@ -43,9 +53,9 @@ const IndexPage = ({
 		}, []);
     
   return (
-		<Layout>
-			<section id="home" className="bg-pattern text-primary">
-				<div className="content">
+    <Layout>
+      <section id="home" className="bg-pattern text-primary">
+        <div className="content">
           <span id="name-subheading">Hi, ich bin</span>
           <h1 id="name-heading">Maximilian</h1>
           <ul className="pills pills-large">
@@ -55,27 +65,43 @@ const IndexPage = ({
             <li>UI/UX</li>
           </ul>
         </div>
-			</section>
-			<section id="about" className="bg-primary">
-				<div className="content">
+      </section>
+      <section id="about" className="bg-primary">
+        <div className="content">
           <h2>Über mich</h2>
+          <p>
+            Seit ich im Alter von 9 Jahren (ca. 2008) gemeinsam mit meinem Vater
+            meine erste Website gestaltet und veröffentlicht hatte, war es mein
+            Ziel, Programmierer zu werden.
+          </p>
+          <p>
+            Mein Ziel ist es seitdem, Menschen mit Software den Alltag zuhause
+            und im Büro leichter, produktiver und unbeschwerter zu machen.
+            Eine nutzerorientierte Digitalisierung von Prozessen sowie Freude
+            bei der Benutzung sind die Kriterien, die meiner Meinung nach
+            ausschlaggebend für die Qualität von Software sind.
+          </p>
+          <p>
+            <strong>
+              Die beste Anwendung bringt Niemandem etwas, wenn sie ungern oder
+              erst gar nicht benutzt wird.
+            </strong>
+          </p>
         </div>
-			</section>
-			<section id="projects" className="bg-secondary-light text-primary">
-				<div className="content">
+      </section>
+      <section id="projects" className="bg-secondary-light text-primary">
+        <div className="content">
           <h2>Projekte</h2>
-          <div className="grid">
-            {Projects}
-          </div>
+          <div className="grid">{Projects}</div>
         </div>
-			</section>
-			<section id="contact" className="bg-primary">
-				<div className="content">
+      </section>
+      <section id="contact" className="bg-primary">
+        <div className="content">
           <h2>Kontakt</h2>
         </div>
-			</section>
-		</Layout>
-	);
+      </section>
+    </Layout>
+  );
 }
 
 export default IndexPage
