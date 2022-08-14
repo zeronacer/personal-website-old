@@ -1,13 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
+import SEO from "../components/seo";
 
 export function Head() {
   return (
-    <>
+    <SEO>
       <title>Projekt | Maximilian Grabau</title>
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-    </>
+    </SEO>
   );
 }
 

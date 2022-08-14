@@ -4,13 +4,23 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'projects',
+        name: "projects",
         path: `${__dirname}/src/project-pages`,
-      }
+      },
     },
-    'gatsby-transformer-remark',
-    'gatsby-plugin-sass'
+    "gatsby-transformer-remark",
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        serialize: ({ path }) => {
+          return {
+            url: path,
+          };
+        },
+      },
+    },
   ],
-}
+};

@@ -4,14 +4,17 @@ import { graphql } from "gatsby";
 import ScrollMagic from "scrollmagic";
 import Layout from "../components/layout";
 import ProjectLink from "../components/project-link";
+import SEO from "../components/seo";
 
 export function Head() {
   return (
-    <>
+    <SEO>
       <title>Maximilian Grabau</title>
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-    </>
+      <meta
+        name="description"
+        content="Hi, ich bin Maximilian Grabau. Als Full-Stack-Webentwickler aus Lübeck arbeite ich mithilfe von PHP, React und WordPress daran, das Netz zu einem besseren Ort zu machen."
+      />
+    </SEO>
   );
 }
 
