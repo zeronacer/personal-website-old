@@ -25,7 +25,7 @@ export default function Template({
           <span className="project-date">{frontmatter.date}</span>
           <ul className="pills">
             {frontmatter.tags.map((tag) => {
-              return <li>{tag}</li>;
+              return <li key={tag}>{tag}</li>;
             })}
           </ul>
         </div>

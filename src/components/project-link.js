@@ -10,7 +10,7 @@ const ProjectLink = ({ project }) => (
       </div>
       <ul className="pills">
         {project.frontmatter.tags.map((tag) => {
-          return <li>{tag}</li>;
+          return <li key={tag}>{tag}</li>;
         })}
       </ul>
     </Link>
