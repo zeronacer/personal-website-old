@@ -1,11 +1,11 @@
-// Utilities
-@import "utilities/css-reset";
-@import "utilities/typography";
-
 // Variables
 @import "variables/fonts";
 @import "variables/colors";
 @import "variables/breakpoints";
+
+// Utilities
+@import "utilities/css-reset";
+@import "utilities/typography";
 
 // Pages
 @import "pages/index";
@@ -44,5 +44,14 @@ main {
     max-width: 75vw;
     margin: auto;
     padding: 5rem 0;
+  }
+}
+
+@media only screen and (max-width: $media_sm) {
+  html {
+    scroll-snap-type: none;
+  }
+  body {
+    font-size: 16px;
   }
 }
