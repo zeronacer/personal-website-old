@@ -20,6 +20,14 @@ header {
           margin-bottom: 0.5rem;
         }
 
+        &:first-child {
+          a.navLink {
+            &.active {
+              color: white;
+            }
+          }
+        }
+
         a.navLink {
           color: $secondary;
           transition: all 300ms;
