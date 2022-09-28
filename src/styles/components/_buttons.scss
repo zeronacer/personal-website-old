@@ -11,6 +11,7 @@ a.button {
     font-weight: 600;
     justify-content: flex-start;
     align-items: center;
+    width: fit-content;
 
     &:hover {
         background-color: $accent;
@@ -22,4 +23,10 @@ div.button-group {
     gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     margin: 1rem 0;
+}
+
+@media only screen and (max-width: $media_sm) {
+    div.button-group {
+        grid-template-columns: 1fr;
+    }
 }

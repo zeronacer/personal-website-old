@@ -11,6 +11,7 @@ ul.pills {
     font-size: 0.8rem;
     background-color: fade-out($color: $accent-dark, $amount: 0.3);
     border-radius: 2rem;
+    width: fit-content;
   }
 
   &.pills-large {
@@ -20,6 +21,13 @@ ul.pills {
       color: $primary;
       border-radius: 2rem;
       font-size: 1.1rem;
+      width: fit-content;
     }
+  }
+}
+
+@media only screen and (max-width: $media_sm) {
+  ul.pills {
+    flex-direction: column;
   }
 }
