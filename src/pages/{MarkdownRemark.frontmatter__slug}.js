@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import SEO from "../components/seo";
+import PageTransition from "gatsby-plugin-page-transitions";
 
 export function Head() {
   return (
@@ -16,25 +17,26 @@ export default function Template({
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   return (
-    <main className="project-container">
-      <article className="content">
-        <a href="/">Zurück</a>
-        <h1 className="project-title">{frontmatter.title}</h1>
-        <div className="project-details">
-          <span className="project-date">{frontmatter.date}</span>
-          <ul className="pills">
-            {frontmatter.tags.map((tag) => {
-              return <li key={tag}>{tag}</li>;
-            })}
-          </ul>
-        </div>
-
-        <div
-          className="project-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </article>
-    </main>
+    <PageTransition>
+      <main className="project-container">
+        <article className="content">
+          <a href="/">Zurück</a>
+          <h1 className="project-title">{frontmatter.title}</h1>
+          <div className="project-details">
+            <span className="project-date">{frontmatter.date}</span>
+            <ul className="pills">
+              {frontmatter.tags.map((tag) => {
+                return <li key={tag}>{tag}</li>;
+              })}
+            </ul>
+          </div>
+          <div
+            className="project-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </article>
+      </main>
+    </PageTransition>
   );
 }
 

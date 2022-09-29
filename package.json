@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "gatsby": "^4.20.0",
+    "gatsby-plugin-page-transitions": "^1.0.8",
     "gatsby-plugin-sass": "^5.20.0",
     "gatsby-plugin-sitemap": "^5.20.0",
     "gatsby-source-filesystem": "^4.20.0",

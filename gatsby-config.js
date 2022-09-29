@@ -22,5 +22,9 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {},
+    },
   ],
 };
