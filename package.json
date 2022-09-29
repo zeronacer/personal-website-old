@@ -21,10 +21,10 @@
     "gatsby-plugin-sitemap": "^5.20.0",
     "gatsby-source-filesystem": "^4.20.0",
     "gatsby-transformer-remark": "^5.20.0",
+    "gsap": "^3.11.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "sass": "^1.54.3",
-    "scrollmagic": "^2.0.8"
+    "sass": "^1.54.3"
   },
   "devDependencies": {
     "eslint": "^8.22.0",

@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { graphql } from "gatsby";
-import ScrollMagic from "scrollmagic";
 import Layout from "../components/layout";
 import ProjectLink from "../components/project-link";
 import SEO from "../components/seo";
@@ -28,34 +29,19 @@ const IndexPage = ({
     .map((edge) => <ProjectLink key={edge.node.id} project={edge.node} />);
 
   useEffect(() => {
-    let controller = new ScrollMagic.Controller();
-
-    let home_scene = new ScrollMagic.Scene({
-      triggerElement: "#home",
-      duration: "100%",
-    }).setClassToggle("#home-link", "text-primary");
-
-    let about_scene = new ScrollMagic.Scene({
-      triggerElement: "#about",
-      duration: "100%",
-    }).setClassToggle("#about-link", "active");
-
-    let projects_scene = new ScrollMagic.Scene({
-      triggerElement: "#projects",
-      duration: "100%",
-    }).setClassToggle("#projects-link", "active");
-
-    let contact_scene = new ScrollMagic.Scene({
-      triggerElement: "#contact",
-      duration: "100%",
-    }).setClassToggle("#contact-link", "active");
-
-    controller.addScene([
-      home_scene,
-      about_scene,
-      projects_scene,
-      contact_scene,
-    ]);
+    const sections = ["home", "about", "projects", "contact"];
+    gsap.registerPlugin(ScrollTrigger);
+    sections.forEach((section) => {
+      ScrollTrigger.create({
+        trigger: "#" + section,
+        start: "-10% top",
+        end: "90% top",
+        toggleClass: {
+          targets: "#" + section + "-link .navLink",
+          className: "active",
+        },
+      });
+    });
   }, []);
 
   return (
