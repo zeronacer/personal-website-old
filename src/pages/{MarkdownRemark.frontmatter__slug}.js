@@ -30,6 +30,7 @@ export default function Template({
               })}
             </ul>
           </div>
+          <img className="project-image" src={frontmatter.image} />
           <div
             className="project-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -48,6 +49,7 @@ export const pageQuery = graphql`
         date(formatString: "DD.MM.YYYY")
         slug
         title
+        image
         tags
       }
     }
