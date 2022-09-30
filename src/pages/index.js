@@ -45,6 +45,8 @@ const IndexPage = ({
     });
   }, []);
 
+  const mailLink = "mailto:max@grabau.dev";
+
   return (
     <PageTransition>
       <Layout>
@@ -97,7 +99,7 @@ const IndexPage = ({
               Projekt passen? Dann schreib mir gern eine Nachricht!
             </p>
             <div className="button-group">
-              <a href="mailto:max@grabau.dev" className="button">
+              <a href={mailLink} className="button">
                 <svg
                   viewBox="0 0 24 24"
                   width="24"
