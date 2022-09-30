@@ -9,9 +9,9 @@
     color: $primary;
     text-decoration: none;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 
     .project-title {
       font-size: 1.3rem;
@@ -31,9 +31,18 @@
       align-items: flex-start;
       justify-content: start;
       gap: 1rem;
+
+      .project-title {
+        font-size: 1.1rem;
+      }
+
+      .project-date {
+        font-size: 0.9rem;
+      }
+
+      ul.pills {
+        flex-direction: row;
+      }
     }
-  }
-  .project-link ul.pills {
-    flex-direction: row;
   }
 }

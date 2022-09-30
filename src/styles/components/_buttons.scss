@@ -1,32 +1,31 @@
 a.button {
-    text-decoration: none;
-    color: $primary;
-    background-color: $secondary;
-    border-radius: 2rem;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    transition: all 300ms;
-    display: flex;
-    gap: 0.5rem;
-    font-weight: 600;
-    justify-content: flex-start;
-    align-items: center;
-    width: fit-content;
+  text-decoration: none;
+  color: $primary;
+  background-color: $secondary;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  transition: all 300ms;
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
 
-    &:hover {
-        background-color: $accent;
-    }
+  &:hover {
+    background-color: $accent;
+  }
 }
 
 div.button-group {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 1rem 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 1rem 0;
 }
 
 @media only screen and (max-width: $media_sm) {
-    div.button-group {
-        grid-template-columns: 1fr;
-    }
+  div.button-group {
+    grid-template-columns: 1fr;
+  }
 }
