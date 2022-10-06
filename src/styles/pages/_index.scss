@@ -2,16 +2,33 @@
   font-size: 10rem;
   font-weight: 600;
   margin-top: -3rem;
+  z-index: 5;
 }
 
 #name-subheading {
   font-size: 5rem;
+  z-index: 5;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+}
+
+.blob {
+  position: absolute;
+  z-index: 0;
+}
+
+#blob1 {
+  top: -40%;
+  left: -10%;
+}
+
+#blob2 {
+  bottom: -30%;
+  right: -10%;
 }
 
 @media only screen and (max-width: $media_sm) {
@@ -24,5 +41,13 @@
   }
   .grid {
     grid-template-columns: 1fr;
+  }
+  #blob1 {
+    top: -20%;
+    left: -30%;
+  }
+  #blob2 {
+    bottom: -30%;
+    right: -30%;
   }
 }

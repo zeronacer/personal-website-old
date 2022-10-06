@@ -35,10 +35,11 @@ main {
   section {
     min-height: 100vh;
     scroll-snap-align: center;
+    position: relative;
+    overflow: hidden;
   }
 
   .content {
-    position: relative;
     display: flex;
     flex-direction: column;
     max-width: 75vw;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import gsap from "gsap";
+import gsap, { Linear } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
@@ -43,6 +43,20 @@ const IndexPage = ({
         },
       });
     });
+
+    gsap.to("#blob1", {
+      rotation: "360",
+      ease: Linear.easeNone,
+      repeat: -1,
+      duration: 90,
+    });
+
+    gsap.to("#blob2", {
+      rotation: "-360",
+      ease: Linear.easeNone,
+      repeat: -1,
+      duration: 80,
+    });
   }, []);
 
   const mailLink = "mailto:max@grabau.dev";
@@ -60,6 +74,8 @@ const IndexPage = ({
               <li>React</li>
               <li>UI/UX</li>
             </ul>
+            <img src="blob1.svg" className="blob" id="blob1" />
+            <img src="blob2.svg" className="blob" id="blob2" />
           </div>
         </section>
         <section id="about" className="bg-primary">
