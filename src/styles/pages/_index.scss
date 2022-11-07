@@ -1,13 +1,18 @@
-#name-heading {
-  font-size: 10rem;
-  font-weight: 600;
-  margin-top: -3rem;
-  z-index: 5;
-}
+.heading {
+  margin-top: 10rem;
+  z-index: 100;
 
-#name-subheading {
-  font-size: 5rem;
-  z-index: 5;
+  #name-heading {
+    font-size: 10rem;
+    font-weight: 600;
+    margin-top: -3rem;
+    z-index: 5;
+  }
+
+  #name-subheading {
+    font-size: 5rem;
+    z-index: 5;
+  }
 }
 
 .grid {
@@ -18,7 +23,7 @@
 
 .blob {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
 }
 
 #blob1 {
@@ -27,18 +32,53 @@
 }
 
 #blob2 {
-  bottom: -30%;
+  bottom: -40%;
   right: -10%;
 }
 
+section#about {
+  p {
+    max-width: 50%;
+  }
+}
+
+@media only screen and (max-width: $media_xl) {
+  #blob1 {
+    left: -30%;
+  }
+  #blob2 {
+    right: -40%;
+  }
+  section#about {
+    p {
+      max-width: 75%;
+    }
+  }
+}
+
+@media only screen and (max-width: $media_lg) {
+  section#home {
+    overflow: hidden;
+  }
+  section#about {
+    p {
+      max-width: 100%;
+    }
+  }
+}
+
 @media only screen and (max-width: $media_sm) {
-  #name-heading {
-    font-size: 3.3rem;
-    margin-top: 0;
+  .heading {
+    margin-top: 5rem;
+    #name-heading {
+      font-size: 3.3rem;
+      margin-top: 0;
+    }
+    #name-subheading {
+      font-size: 2rem;
+    }
   }
-  #name-subheading {
-    font-size: 2rem;
-  }
+
   .grid {
     grid-template-columns: 1fr;
   }
@@ -47,7 +87,7 @@
     left: -30%;
   }
   #blob2 {
-    bottom: -30%;
+    bottom: -10%;
     right: -30%;
   }
 }

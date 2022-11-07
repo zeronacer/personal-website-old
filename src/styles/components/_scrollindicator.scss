@@ -1,0 +1,16 @@
+.scroll-indicator {
+  align-self: center;
+  margin-top: 13rem;
+  z-index: 100;
+
+  svg {
+    color: white;
+    width: 64px;
+  }
+}
+
+@media only screen and (max-width: $media_sm) {
+  .scroll-indicator {
+    margin-top: 4rem;
+  }
+}

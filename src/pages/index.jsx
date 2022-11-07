@@ -30,20 +30,6 @@ const IndexPage = ({
     .map((edge) => <ProjectLink key={edge.node.id} project={edge.node} />);
 
   useEffect(() => {
-    const sections = ["home", "about", "projects", "contact"];
-    gsap.registerPlugin(ScrollTrigger);
-    sections.forEach((section) => {
-      ScrollTrigger.create({
-        trigger: "#" + section,
-        start: "-10% top",
-        end: "90% top",
-        toggleClass: {
-          targets: "#" + section + "-link .navLink",
-          className: "active",
-        },
-      });
-    });
-
     gsap.to("#blob1", {
       rotation: "360",
       ease: Linear.easeNone,
@@ -57,6 +43,14 @@ const IndexPage = ({
       repeat: -1,
       duration: 80,
     });
+
+    gsap.to("#scrollindicator", {
+      duration: .8,
+      y: 5,
+      ease: "circ.in",
+      repeat: -1,
+      yoyo: true
+    })
   }, []);
 
   const mailLink = "mailto:max@grabau.dev";
@@ -66,14 +60,19 @@ const IndexPage = ({
       <Layout>
         <section id="home" className="bg-pattern text-primary">
           <div className="content">
-            <span id="name-subheading">Hi, ich bin</span>
-            <h1 id="name-heading">Maximilian</h1>
-            <ul className="pills pills-large">
-              <li>Symfony</li>
-              <li>WordPress</li>
-              <li>React</li>
-              <li>UI/UX</li>
+            <div className="heading">
+              <span id="name-subheading">Hi, ich bin</span>
+              <h1 id="name-heading">Maximilian</h1>
+            </div>
+            <ul className="pills pills--large">
+              <li><h2>Web Development</h2></li>
+              <li><h2>Symfony</h2></li>
+              <li><h2>WordPress</h2></li>
+              <li><h2>UI/UX</h2></li>
             </ul>
+            <a href="#about" className="scroll-indicator" id="scrollindicator">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
             <img src="blob1.svg" className="blob" id="blob1" />
             <img src="blob2.svg" className="blob" id="blob2" />
           </div>
@@ -99,15 +98,39 @@ const IndexPage = ({
                 erst gar nicht benutzt wird.
               </strong>
             </p>
+            <h3>Skills</h3>
+            <ul className="pills pills--large pills--slider">
+              <li>PHP</li>
+              <li>HTML</li>
+              <li>JavaScript</li>
+              <li>CSS (Sass, Less)</li>
+              <li>Symfony</li>
+              <li>React</li>
+              <li>SQL</li>
+              <li>GraphQL</li>
+              <li>GSAP</li>
+              <li>Versionsverwaltung (Git)</li>
+            </ul>
+            <h3>Tools</h3>
+            <ul className="pills pills--large pills--slider">
+              <li>Jira</li>
+              <li>Visual Studio Code</li>
+              <li>PHPStorm</li>
+              <li>WordPress</li>
+              <li>Github</li>
+              <li>Office 365</li>
+              <li>Figma / Penpot</li>
+              <li>Linux Shell</li>
+            </ul>
           </div>
         </section>
-        <section id="projects" className="bg-secondary-light text-primary">
+        <section id="projects">
           <div className="content">
             <h2>Projekte</h2>
             <div className="grid">{Projects}</div>
           </div>
         </section>
-        <section id="contact" className="bg-primary">
+        <section id="contact" className="bg-secondary text-primary section--compact">
           <div className="content">
             <h2>Kontakt</h2>
             <p>
@@ -169,6 +192,11 @@ const IndexPage = ({
             </div>
           </div>
         </section>
+        <footer>
+          <span className="copyright">© 2022 Maximilian Grabau</span>
+          <span className="built-by">Gemacht mit ❤️ von <a href="#home">mir</a></span>
+          <a className="to-top" href="#home">nach oben</a>
+        </footer>
       </Layout>
     </PageTransition>
   );

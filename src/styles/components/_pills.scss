@@ -9,20 +9,40 @@ ul.pills {
     @include font-fira();
     padding: 0.3rem 0.8rem;
     font-size: 0.8rem;
-    background-color: fade-out($color: $accent-dark, $amount: 0.3);
+    background-color: $secondary;
     border-radius: 2rem;
     width: fit-content;
+    height: fit-content;
+    white-space: nowrap;
     z-index: 5;
+    color: $primary;
+
+    h2 {
+      font-size: 18px;
+      margin: 0;
+    }
   }
 
-  &.pills-large {
+  &.pills--large {
     li {
-      padding: 1rem 2rem;
-      background-color: fade-out($color: $secondary, $amount: 0.3);
-      color: $primary;
+      padding: 0.6rem 1.6rem;
       border-radius: 2rem;
       font-size: 1.1rem;
       width: fit-content;
+    }
+  }
+
+  &.pills--slider {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    // snapping
+    scroll-snap-type: inline mandatory;
+    li {
+      scroll-snap-align: center;
+      scroll-padding-inline: 1rem;
     }
   }
 }
