@@ -22,9 +22,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-page-transitions",
-      options: {},
-    },
+    "gatsby-plugin-netlify",
   ],
 };
